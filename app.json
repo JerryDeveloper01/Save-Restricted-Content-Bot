@@ -1,0 +1,88 @@
+{
+  "name": "Save Restricted Content Bot master-v1 branch",
+  "description": "Save Restricted Content Bot by Golden Eagle",
+  "logo": "https://i.ibb.co/zTPJFct8/photo-2025-04-25-12-55-01-7497233558289776672.jpg",
+  "keywords": ["python3", "telegram", "MusicBot", "telegram-bot", "pyrogram"],
+  "repository": "https://github.com/devgaganin/save_restricted-content-telegram-bot-repo",
+  "success_url": "https://devgagan.in",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "26713214",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "fc87c0fb26949deb0bc940dd35c1658d",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot's token from Botfather",
+      "value": "",
+      "required": true
+    },
+    "MONGO_DB": {
+      "description": "Get a MongoDB URL from https://cloud.mongodb.com.",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "The user ID of the user whom you would like to add as OWNER.",
+      "value": "7752941299",
+      "required": true
+    },    
+    "FREEMIUM_LIMIT": {
+      "description": "Batch size for free users",
+      "value": "0",
+      "required": true
+    },
+    "PREMIUM_LIMIT": {
+      "description": "Batch size for premium users",
+      "value": "5000",
+      "required": true
+    },
+    "STRING": {
+      "description": "Enter premium account session string if you want to allow the paid users to upload upto 4GB",
+      "value": "",
+      "required": false
+    },
+
+    "DEFAULT_SESSION": {
+      "description": "Enter session string if you want YOUR USERS not to be forced login and can do things via invite_link",
+      "value": "",
+      "required": false
+    },
+    
+    "WEBSITE_URL": {
+      "description": "Enter shortener website domain eg upshrink.com",
+      "value": "link4url.com",
+      "required": false
+    },
+    "AD_API": {
+      "description": "Batch size for premium users",
+      "value": "87fd79e2bdf79a79adc760a150c21223ab9862cc",
+      "required": false
+    },
+    
+    "SUDO_USERS": {
+      "description": "Other Admins' IDs (optional)",
+      "value": "7752941299",
+      "required": false
+    },
+    "CHANNEL_ID": {
+      "description": "Enter Channel ID (-100) and make bot admin there",
+      "value": "-1002647218657",
+      "required": true
+    },
+    "LOG_GROUP": {
+      "description": "Enter Log Channel/Group ID (-100) and make bot admin there",
+      "value": "-1002819546741",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview" }
+  ],
+  "stack": "container"
+}
